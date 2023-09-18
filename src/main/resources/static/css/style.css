@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#page-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#left-animation {
+    background-color: teal;
+    width: 30%;
+    height: 100%;
+}
+
+#right-form {
+    width: 70%;
+    height: 100%;
+    background-color: red;
+}
+
+#separator {
+    text-align: center;
+    height: 0.5em;
+    border-bottom: 1px solid grey;
+    margin-bottom: 0.5em;
+}
+
+#separator:first-line {
+    background-color: white;
+}
+
+#form-container {
+    width: 40%;
+}
