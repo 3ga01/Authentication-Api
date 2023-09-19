@@ -4,23 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>Sign In</title>
+    <title>Sign Up</title>
   </head>
   <body>
     <div id="page-container">
       <div id="left-animation"></div>
       <div id="right-form">
         <div id="form-container">
-          <form action="" method="post">
-            <h3>Sign in to Dribble</h3>
+          <form action="/signUp" method="post" th:object="${user}">
+            <h3>Sign Up to App</h3>
             <button>Sign up with Google</button>
             <p id="separator">or sign up with email</p>
+            <label for="username">Username</label>
+            <input type="text" name="username" />
             <label for="email">Email</label>
-            <input type="email" />
-            <label for="password">Email</label>
-            <input type="password" />
+            <input type="email" name="email" />
+            <label for="password">Password</label>
+            <input type="password" name="password" />
             <button>Sign Up</button>
-            <p>Don't have an account? Sign up</p>
+            <p>
+              Already have an account?
+              <a href="/login">Login</a>
+            </p>
           </form>
         </div>
       </div>
