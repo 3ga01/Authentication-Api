@@ -4,31 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>Sign Up</title>
-  </head>
-  <body>
-    <div id="page-container">
-      <div id="left-animation"></div>
-      <div id="right-form">
-        <div id="form-container">
-          <form action="/signUp" method="post" th:object="${user}">
-            <h3>Sign Up to App</h3>
-            <button>Sign up with Google</button>
-            <p id="separator">or sign up with email</p>
-            <label for="username">Username</label>
-            <input type="text" name="username" />
-            <label for="email">Email</label>
-            <input type="email" name="email" />
-            <label for="password">Password</label>
-            <input type="password" name="password" />
-            <button>Sign Up</button>
-            <p>
-              Already have an account?
-              <a href="/login">Login</a>
-            </p>
-          </form>
-        </div>
+    <title>Sign Up</title></head
+  ><!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="/css/style.css" />
+      <title>Sign Up</title>
+    </head>
+    <body>
+      <div id="page-container">
+        <section id="left-animation">
+          <video
+            src="https://cdn.dribbble.com/uploads/48292/original/30fd1f7b63806eff4db0d4276eb1ac45.mp4?1689187515"
+            autoplay=""
+            loop=""
+            muted=""
+          ></video>
+        </section>
+        <section id="right-form">
+          <div id="form-container">
+            <form action="" method="post">
+              <h3>Sign up to your Website</h3>
+              <div class="space"></div>
+              <button>
+                <img src="/images/google2.png" alt="Google logo" />
+                Sign up with Google
+              </button>
+              <div class="space"></div>
+              <p id="separator">or</p>
+              <div class="space"></div>
+              <button id="google-button">Continue with email</button>
+              <div class="space"></div>
+
+              <p>
+                Already have an account?
+                <a href="/login">Sign In</a>
+              </p>
+            </form>
+          </div>
+        </section>
       </div>
-    </div>
-  </body>
+    </body>
+  </html>
 </html>
