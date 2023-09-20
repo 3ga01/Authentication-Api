@@ -8,25 +8,41 @@
   </head>
   <body>
     <div id="page-container">
-      <div id="left-animation"></div>
-      <div id="right-form">
+      <section id="left-animation">
+        <video
+          src="https://cdn.dribbble.com/uploads/48226/original/b8bd4e4273cceae2889d9d259b04f732.mp4?1689028949" autoplay="" loop="" muted=""
+        ></video>
+      </section>
+      <section id="right-form">
         <div id="form-container">
           <form action="" method="post">
-            <h3>Sign in to Dribble</h3>
-            <button>Sign in with Google</button>
+            <h3>Sign in to your Website</h3>
+            <div class="space"></div>
+            <button id="google-button">
+              <img src="/images/google2.png" alt="Google logo" />
+              Sign in with Google
+            </button>
+            <div class="space"></div>
             <p id="separator">or sign in with email</p>
-            <label for="email">Email</label>
+            <div class="space"></div>
+            <label for="email">Username or Email</label>
+            <div class="space"></div>
             <input type="email" />
+            <div class="space"></div>
             <label for="password">Password</label>
+            <div class="space"></div>
             <input type="password" />
+            <div class="space"></div>
             <button>Sign In</button>
+            <div class="space"></div>
+
             <p>
               Don't have an account?
               <a href="/signUp">Sign up</a>
             </p>
           </form>
         </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>
