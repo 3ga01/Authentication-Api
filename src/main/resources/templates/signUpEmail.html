@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Sign In</title>
+  </head>
+  <body>
+    <div id="page-container">
+      <section id="left-animation">
+        <video
+          src="https://cdn.dribbble.com/uploads/48226/original/b8bd4e4273cceae2889d9d259b04f732.mp4?1689028949"
+          autoplay=""
+          loop=""
+          muted=""
+        ></video>
+      </section>
+
+      <section id="right-form">
+        <div id="form-container">
+          <h3>Sign in to your Website</h3>
+
+          <div class="space"></div>
+          <button id="google-button">
+            <img src="/images/google2.png" alt="Google logo" />
+            Sign in with Google
+          </button>
+
+          <div class="space"></div>
+          <p id="separator">or sign in with email</p>
+
+          <form action="/signUp" method="post" th:object="${user}">
+            <div class="space"></div>
+            <label for="username">Username</label>
+            <div class="space"></div>
+            <input type="text" name="username" />
+
+            <div class="space"></div>
+            <label for="email">Email</label>
+            <div class="space"></div>
+            <input type="email" name="email" />
+
+            <div class="space"></div>
+            <label for="password">Password</label>
+            <div class="space"></div>
+            <input type="password" name="password" />
+
+            <div class="space"></div>
+            <button>Create account</button>
+          </form>
+
+          <div class="space"></div>
+          <p>
+            Already have an account?
+            <a href="/login">Sign In</a>
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
