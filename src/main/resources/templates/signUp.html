@@ -25,24 +25,25 @@
         </section>
         <section id="right-form">
           <div id="form-container">
-            <form action="" method="post">
-              <h3>Sign up to your Website</h3>
-              <div class="space"></div>
-              <button>
-                <img src="/images/google2.png" alt="Google logo" />
-                Sign up with Google
-              </button>
-              <div class="space"></div>
-              <p id="separator">or</p>
-              <div class="space"></div>
-              <button id="google-button">Continue with email</button>
-              <div class="space"></div>
+            <h3>Sign up to your Website</h3>
+            <div class="space"></div>
+            <button>
+              <img src="/images/google2.png" alt="Google logo" />
+              Sign up with Google
+            </button>
+            <div class="space"></div>
+            <p id="separator">or</p>
 
-              <p>
-                Already have an account?
-                <a href="/login">Sign In</a>
-              </p>
+            <div class="space"></div>
+            <form action="/signUpEmail" method="get">
+            <button id="google-button">Continue with email</button>
             </form>
+
+            <div class="space"></div>
+            <p>
+              Already have an account?
+              <a href="/login">Sign In</a>
+            </p>
           </div>
         </section>
       </div>

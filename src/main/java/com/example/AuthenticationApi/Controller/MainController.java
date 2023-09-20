@@ -27,6 +27,11 @@ public class MainController {
         return new ModelAndView("signUp");
     }
 
+    @GetMapping("/signUpEmail")
+    public ModelAndView getSignUpEmailPage() {
+        return new ModelAndView("signUpEmail");
+    }
+
     @PostMapping("/signUp")
     public ModelAndView addNewUser(@ModelAttribute("user") User user) {
 
