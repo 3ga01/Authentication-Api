@@ -32,6 +32,11 @@ public class MainController {
         return new ModelAndView("signUpEmail");
     }
 
+    @GetMapping("/welcome")
+    public ModelAndView getWelcomePage() {
+        return new ModelAndView("welcome");
+    }
+
     @PostMapping("/signUp")
     public ModelAndView addNewUser(@ModelAttribute("user") User user) {
 
