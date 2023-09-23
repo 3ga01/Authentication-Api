@@ -4,10 +4,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
@@ -15,27 +13,26 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
   @Bean
-  public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-    http
-        .authorizeHttpRequests((request) -> request
-            .requestMatchers("/", "/login", "/css/**", "/signUp", "/signUpEmail").permitAll()
-            .anyRequest().authenticated())
-        .formLogin((form) -> form
-            .loginPage("/login")
-            .permitAll());
-
-    return http.build();
+  public static PasswordEncoder passwordEncoder() {
+    return new BCryptPasswordEncoder();
   }
 
   @Bean
-  public UserDetailsService userDetailsService() {
-    UserDetails user = User.withDefaultPasswordEncoder()
-        .username("user")
-        .password("password")
-        .roles("USER")
-        .build();
+  public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    http
+        .authorizeHttpRequests((request) -> request
+            .requestMatchers("/", "/css/**", "/images/**", "/signUp", "/signUpEmail", "/login").permitAll())
 
-    return new InMemoryUserDetailsManager(user);
+        .formLogin((form) -> form
+            .loginPage("/login")
+            .failureUrl("/login")
+            .loginProcessingUrl("/login")
+            .defaultSuccessUrl("/signUp")
+            .usernameParameter("email")
+            .passwordParameter("password")
+            .permitAll());
+
+    return http.build();
   }
 
 }

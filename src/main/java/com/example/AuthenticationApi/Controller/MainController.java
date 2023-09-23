@@ -1,6 +1,7 @@
 package com.example.AuthenticationApi.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -8,12 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.AuthenticationApi.Model.User;
+import com.example.AuthenticationApi.Repository.UserRepository;
 import com.example.AuthenticationApi.Service.UserService;
 
 @RestController
 public class MainController {
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private UserRepository userRepository;
 
     @GetMapping("/login")
     public ModelAndView getHomePage() {
@@ -28,7 +33,8 @@ public class MainController {
     }
 
     @GetMapping("/signUpEmail")
-    public ModelAndView getSignUpEmailPage() {
+    public ModelAndView getSignUpEmailPage(Model model) {
+        model.addAttribute("user", new User());
         return new ModelAndView("signUpEmail");
     }
 
@@ -38,10 +44,10 @@ public class MainController {
     }
 
     @PostMapping("/signUp")
-    public ModelAndView addNewUser(@ModelAttribute("user") User user) {
+    public String addNewUser(@ModelAttribute("user") User user) {
 
-        userService.save(user);
+        userRepository.save(user);
 
-        return new ModelAndView("index");
+        return ("Welcome");
     }
 }

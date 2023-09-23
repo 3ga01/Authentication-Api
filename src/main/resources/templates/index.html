@@ -19,16 +19,18 @@
 
       <section id="right-form">
         <div id="form-container">
-          <form action="" method="post">
-            <h3>Sign in to your Website</h3>
+          <h3>Sign in to your Website</h3>
 
-            <div class="space"></div>
+          <div class="space"></div>
+          <form action="">
             <button id="google-button">
               <img src="/images/google2.png" alt="Google logo" />
               Sign in with Google
             </button>
+          </form>
 
-            <div class="space"></div>
+          <div class="space"></div>
+          <form action="/login" method="post" th:object="${user}">
             <p id="separator">or sign in with email</p>
 
             <div class="space"></div>
