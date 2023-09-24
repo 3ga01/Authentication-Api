@@ -1,9 +1,9 @@
-// package com.example.AuthenticationApi.Service;
+package com.example.AuthenticationApi.Service;
 
-// import com.example.AuthenticationApi.Model.User;
+import com.example.AuthenticationApi.Model.User;
 
-// public interface UserService {
+public interface UserService {
 
-//     void saveUser(User user);
+    void saveUser(User user);
 
-// }
+}

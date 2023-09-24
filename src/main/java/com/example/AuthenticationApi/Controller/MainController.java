@@ -10,9 +10,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.example.AuthenticationApi.Model.User;
 import com.example.AuthenticationApi.Repository.UserRepository;
+import com.example.AuthenticationApi.Service.UserService;
 
 @RestController
 public class MainController {
+
+    @Autowired
+    private UserService userService;
 
     @Autowired
     private UserRepository userRepository;
@@ -42,10 +46,8 @@ public class MainController {
 
     @PostMapping("/signUp")
     public ModelAndView addNewUser(@ModelAttribute("user") User user) {
-
-        userRepository.save(user);
-        System.out.println(user.getEmail());
-
-        return new ModelAndView("redirect:/welcome");
+        userService.saveUser(user);
+        return new ModelAndView("redirect:/login");
     }
+
 }
