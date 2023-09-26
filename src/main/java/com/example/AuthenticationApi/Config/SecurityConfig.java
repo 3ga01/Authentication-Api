@@ -24,6 +24,13 @@ import com.example.AuthenticationApi.Service.UserDetailsSvc;
 @EnableWebSecurity
 public class SecurityConfig {
 
+  @Autowired
+  private UserDetailsSvc userDetailsService;
+
+  public SecurityConfig(UserDetailsSvc userDetailsService) {
+    this.userDetailsService = userDetailsService;
+  }
+
   // @Bean
   // public UserDetailsService userDetailsService() {
   // return new UserDetailsSvc();
@@ -55,6 +62,17 @@ public class SecurityConfig {
     return http.build();
   }
 
+  @Bean
+  public AuthenticationManager authenticationManager(
+      AuthenticationConfiguration authenticationConfiguration) throws Exception {
+    return authenticationConfiguration.getAuthenticationManager();
+  }
+
+  @Bean
+  PasswordEncoder passwordEncoder() {
+    return new BCryptPasswordEncoder();
+  }
+
   // @Bean
   // public AuthenticationManager
   // authenticationManager(AuthenticationConfiguration
@@ -63,9 +81,9 @@ public class SecurityConfig {
   // return authenticationConfiguration.getAuthenticationManager();
   // }
 
-  @Bean
-  public UserDetailsService userDetailsService() {
+  // @Bean
+  // public UserDetailsService userDetailsService() {
 
-    return new UserDetailsSvc();
-  }
+  // return new UserDetailsSvc();
+  // }
 }
