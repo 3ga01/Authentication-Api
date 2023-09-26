@@ -44,10 +44,15 @@ public class MainController {
         return new ModelAndView("welcome");
     }
 
+    @GetMapping("/fail")
+    public String fail() {
+        return ("login failed");
+    }
+
     @PostMapping("/signUp")
     public ModelAndView addNewUser(@ModelAttribute("user") User user) {
         userService.saveUser(user);
-        return new ModelAndView("redirect:/login");
+        return new ModelAndView("redirect:/welcome");
     }
 
 }

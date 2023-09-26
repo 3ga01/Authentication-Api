@@ -18,6 +18,9 @@
       </section>
 
       <section id="right-form">
+        <p th:if="${param.error ne null}" class="error-message">
+          Invalid username or password
+        </p>
         <div id="form-container">
           <h3>Sign in to your Website</h3>
 
@@ -30,23 +33,23 @@
           </form>
 
           <div class="space"></div>
-          <form action="/logins" method="post" th:object="${user}">
+          <form action="/login" method="post">
             <p id="separator">or sign in with email</p>
 
             <div class="space"></div>
             <label for="email">Username or Email</label>
 
             <div class="space"></div>
-            <input type="email" />
+            <input type="text" name="email" />
 
             <div class="space"></div>
             <label for="password">Password</label>
 
             <div class="space"></div>
-            <input type="password" />
+            <input type="password" name="password" />
 
             <div class="space"></div>
-            <button>Sign In</button>
+            <button type="submit">Sign In</button>
             <div class="space"></div>
 
             <p>
