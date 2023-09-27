@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-
+//Add User Role Entity
 @Entity
 @Table(name = "roles")
 public class Role {

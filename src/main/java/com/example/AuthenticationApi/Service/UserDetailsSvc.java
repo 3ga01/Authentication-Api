@@ -16,6 +16,7 @@ import com.example.AuthenticationApi.Model.Role;
 import com.example.AuthenticationApi.Model.User;
 import com.example.AuthenticationApi.Repository.UserRepository;
 
+//Implement Custom Userdetails Service
 @Service
 public class UserDetailsSvc implements UserDetailsService {
 
@@ -32,9 +33,6 @@ public class UserDetailsSvc implements UserDetailsService {
 
         return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(),
                 mapRolesToAuthorities(user.getRoles()));
-
-        // Create a UserDetails object with the user's details
-        // You may need to adjust this based on your User entity's structure
 
     }
 
