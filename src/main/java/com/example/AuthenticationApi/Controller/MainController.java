@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.AuthenticationApi.Model.User;
-import com.example.AuthenticationApi.Repository.UserRepository;
 import com.example.AuthenticationApi.Service.UserService;
 
 @RestController
@@ -17,9 +16,6 @@ public class MainController {
 
     @Autowired
     private UserService userService;
-
-    @Autowired
-    private UserRepository userRepository;
 
     @GetMapping("/login")
     public ModelAndView getHomePage() {
@@ -39,10 +35,7 @@ public class MainController {
         return new ModelAndView("signUpEmail");
     }
 
-    @GetMapping("/user/welcome")
-    public ModelAndView getWelcomePage() {
-        return new ModelAndView("welcome");
-    }
+    
 
     @GetMapping("/fail")
     public String fail() {

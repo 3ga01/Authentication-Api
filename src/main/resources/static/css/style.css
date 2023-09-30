@@ -100,3 +100,32 @@ p {
     color: black;
     border: 1px solid #DBDBDE;
 }
+
+@media screen and (max-width: 500px) {
+
+    /* Your CSS rules for small screens go here */
+    /* For example, you can adjust font sizes, margins, or hide elements */
+    #right-form {
+        width: 100%;
+        overflow: scroll;
+        display: flex;
+        /* align-items: center;
+        justify-content: center;
+        background-color: red; */
+    }
+
+    #form-container {
+        width: 80%;
+        margin-top: 39px;
+        margin-left: 45px;
+        margin-right: 5px;
+        /* margin-left: 5%;
+        margin-top: 4%; */
+        /* background-color: yellow; */
+
+    }
+
+    #left-animation {
+        display: none;
+    }
+}
