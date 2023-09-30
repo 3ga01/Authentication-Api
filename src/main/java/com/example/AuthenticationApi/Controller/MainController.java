@@ -39,7 +39,7 @@ public class MainController {
         return new ModelAndView("signUpEmail");
     }
 
-    @GetMapping("/welcome")
+    @GetMapping("/user/welcome")
     public ModelAndView getWelcomePage() {
         return new ModelAndView("welcome");
     }
