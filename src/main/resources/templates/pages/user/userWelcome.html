@@ -4,8 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css" />
   </head>
   <body>
-    <h1>Welcome <span th:text="${authenticatedUser}"></span></h1>
+    <div id="container">
+      <section id="dashboard">
+        <div id="profile">
+          <h1>Hello <span th:text="${authenticatedUser}"></span></h1>
+          <div id="profile-photo"></div>
+        </div>
+        <h1>Home</h1>
+        <h1>Statement of Results</h1>
+        <h1>Registered Courses</h1>
+        <h1>User info</h1>
+        <h1>Calender</h1>
+        <h1>Announcements</h1>
+        <h1>Upcoming Events</h1>
+        <h1>Societies/Clubs</h1>
+        <h1>Fees</h1>
+        <h1>Assignments</h1>
+        <h1>Exams</h1>
+        <h1>Learning Materials</h1>
+        <h1>Past Questions</h1>
+        <h1>Library Services</h1>
+      </section>
+      <section id="dashboard-info"></section>
+    </div>
   </body>
 </html>

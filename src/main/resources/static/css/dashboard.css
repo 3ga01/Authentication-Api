@@ -1,0 +1,35 @@
+#dashboard {
+    width: 30%;
+    /* height: 500px; */
+    background-color: red;
+    overflow: scroll;
+}
+
+#dashboard-info {
+    width: 70%;
+    /* height: 20px; */
+    background-color: teal;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+#profile-photo {
+    background-color: white;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+#profile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
