@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.AuthenticationApi.Model.User;
-import com.example.AuthenticationApi.Service.UserService;
+import com.example.AuthenticationApi.Service.UserServices.UserService;
 
 @RestController
 public class MainController {

@@ -1,4 +1,4 @@
-package com.example.AuthenticationApi.Service;
+package com.example.AuthenticationApi.Service.DetailsService;
 
 import java.util.Collection;
 import java.util.List;

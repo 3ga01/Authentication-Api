@@ -9,7 +9,7 @@ public class AdminController {
 
     @GetMapping("/admin/welcome")
     public ModelAndView getWelcomePage() {
-        return new ModelAndView("adminWelcome");
+        return new ModelAndView("pages/admin/adminWelcome");
     }
 
 }

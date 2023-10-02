@@ -1,4 +1,4 @@
-package com.example.AuthenticationApi.Service;
+package com.example.AuthenticationApi.Service.UserServices;
 
 import java.util.Collections;
 
@@ -17,8 +17,7 @@ public class UserServiceImplt implements UserService {
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    RoleService roleService;
+    
 
     @Autowired
     RoleRepository roleRepository;

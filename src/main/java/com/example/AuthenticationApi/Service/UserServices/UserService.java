@@ -1,4 +1,4 @@
-package com.example.AuthenticationApi.Service;
+package com.example.AuthenticationApi.Service.UserServices;
 
 import com.example.AuthenticationApi.Model.User;
 
