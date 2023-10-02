@@ -7,12 +7,19 @@
     <link rel="stylesheet" href="/css/dashboard.css" />
   </head>
   <body>
+    <div>
+      <section>
+        <header>
+          <div id="profile">
+            <h1>Hello <span th:text="${authenticatedUser}"></span></h1>
+            <div id="profile-photo"></div>
+          </div>
+          <div id="rigth-header"><a href="">logout</a></div>
+        </header>
+      </section>
+    </div>
     <div id="container">
       <section id="dashboard">
-        <div id="profile">
-          <h1>Hello <span th:text="${authenticatedUser}"></span></h1>
-          <div id="profile-photo"></div>
-        </div>
         <h1>Home</h1>
         <h1>Statement of Results</h1>
         <h1>Registered Courses</h1>

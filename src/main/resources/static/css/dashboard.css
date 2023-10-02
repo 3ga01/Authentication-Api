@@ -1,3 +1,12 @@
+header {
+    display: flex;
+    background-color: orchid;
+    justify-content: space-between;
+    align-items: center;
+    width: 99%;
+    position: fixed;
+}
+
 #dashboard {
     width: 30%;
     /* height: 500px; */
@@ -21,16 +30,21 @@
 }
 
 #profile-photo {
-    background-color: white;
-    height: 150px;
-    width: 150px;
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
 }
 
 #profile {
+
+    width: 25%;
+
+    background-color: green;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+
 
 }
 
@@ -39,12 +53,13 @@
     background-color: blue;
 }
 
-#home{
+#home {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+
 }
 
 .card {
@@ -54,5 +69,10 @@
     background-color: white;
     margin: 10px;
     text-align: center;
-    
+
+}
+
+#right-header {
+    width: 70%;
+    background-color: rgb(8, 8, 8);
 }
