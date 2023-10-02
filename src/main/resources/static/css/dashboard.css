@@ -33,3 +33,26 @@
     align-items: center;
 
 }
+
+#dashboard-info {
+    overflow: scroll;
+    background-color: blue;
+}
+
+#home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: 300px;
+    width: 300px;
+    border-radius: 20%;
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+    
+}
