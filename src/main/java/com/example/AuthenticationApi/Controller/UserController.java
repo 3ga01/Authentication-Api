@@ -29,4 +29,9 @@ public class UserController {
         return new ModelAndView("pages/user/userWelcome");
     }
 
+    @GetMapping("/user/home")
+    public ModelAndView getHome() {
+        return new ModelAndView("/pages/user/home");
+    };
+
 }

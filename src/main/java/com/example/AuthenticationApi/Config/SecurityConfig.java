@@ -10,6 +10,8 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.header.HeaderWriter;
+import org.springframework.security.web.header.writers.frameoptions.XFrameOptionsHeaderWriter;
 
 @Configuration
 @EnableWebSecurity
@@ -19,9 +21,9 @@ public class SecurityConfig {
   @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
     http
-    
+
         .authorizeHttpRequests((request) -> request
-            .requestMatchers("/css/**", "/images/**", "/signUp", "/signUpEmail", "/").permitAll()
+            .requestMatchers("/css/**", "/images/**", "/signUp", "/signUpEmail", "/", "/js/**").permitAll()
             .requestMatchers("/user/**").hasAnyAuthority("ADMIN", "USER")
             .requestMatchers("/admin/**").hasAuthority("ADMIN")
             .anyRequest().authenticated())
@@ -33,15 +35,17 @@ public class SecurityConfig {
             .passwordParameter("password")
             .permitAll())
         .csrf(AbstractHttpConfigurer::disable)
-        .logout((logout) ->
-                 logout
-                     .invalidateHttpSession(true)
-                     .logoutUrl("/logout")
-                     .logoutSuccessUrl("/login")
-             );
+        .logout((logout) -> logout
+            .invalidateHttpSession(true)
+            .logoutUrl("/logout")
+            .logoutSuccessUrl("/login"))
+        .headers((headers) -> headers
+            .frameOptions(frameOptions -> frameOptions
+                .sameOrigin()));
     return http.build();
   }
 
+  
   // Inject Auth Manager
   @Bean
   public AuthenticationManager authenticationManager(
