@@ -3,20 +3,17 @@ header {
     background-color: orchid;
     justify-content: space-between;
     align-items: center;
-    width: 99%;
-    position: fixed;
+    width: 100%;
 }
 
 #dashboard {
     width: 30%;
-    /* height: 500px; */
     background-color: red;
     overflow: scroll;
 }
 
 #dashboard-info {
     width: 70%;
-    /* height: 20px; */
     background-color: teal;
 }
 
@@ -26,7 +23,6 @@ header {
     justify-content: center;
     height: 100vh;
     overflow: hidden;
-
 }
 
 #profile-photo {
@@ -37,15 +33,11 @@ header {
 }
 
 #profile {
-
     width: 25%;
-
     background-color: green;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
 }
 
 #dashboard-info {
@@ -59,7 +51,6 @@ header {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-
 }
 
 .card {
@@ -69,7 +60,6 @@ header {
     background-color: white;
     margin: 10px;
     text-align: center;
-
 }
 
 #right-header {

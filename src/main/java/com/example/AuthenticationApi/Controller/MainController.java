@@ -35,8 +35,6 @@ public class MainController {
         return new ModelAndView("signUpEmail");
     }
 
-    
-
     @GetMapping("/fail")
     public String fail() {
         return ("login failed");
@@ -47,5 +45,6 @@ public class MainController {
         userService.saveUser(user);
         return new ModelAndView("redirect:/welcome");
     }
+
 
 }

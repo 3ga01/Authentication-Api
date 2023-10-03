@@ -19,6 +19,7 @@ public class SecurityConfig {
   @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
     http
+    
         .authorizeHttpRequests((request) -> request
             .requestMatchers("/css/**", "/images/**", "/signUp", "/signUpEmail", "/").permitAll()
             .requestMatchers("/user/**").hasAnyAuthority("ADMIN", "USER")
@@ -31,7 +32,13 @@ public class SecurityConfig {
             .usernameParameter("email")
             .passwordParameter("password")
             .permitAll())
-        .csrf(AbstractHttpConfigurer::disable);
+        .csrf(AbstractHttpConfigurer::disable)
+        .logout((logout) ->
+                 logout
+                     .invalidateHttpSession(true)
+                     .logoutUrl("/logout")
+                     .logoutSuccessUrl("/login")
+             );
     return http.build();
   }
 

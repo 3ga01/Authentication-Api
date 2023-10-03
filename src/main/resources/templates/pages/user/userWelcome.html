@@ -14,7 +14,11 @@
             <h1>Hello <span th:text="${authenticatedUser}"></span></h1>
             <div id="profile-photo"></div>
           </div>
-          <div id="rigth-header"><a href="">logout</a></div>
+          <div id="rigth-header">
+            <form action="/logout" method="post">
+              <button type="submit">logout</button>
+            </form>
+          </div>
         </header>
       </section>
     </div>
