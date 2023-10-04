@@ -39,4 +39,59 @@ public class UserController {
         return new ModelAndView("/pages/user/statement");
     };
 
+    @GetMapping("/user/dashboard/info")
+    public ModelAndView getUserInfo() {
+        return new ModelAndView("/pages/user/userInfo");
+    };
+
+    @GetMapping("/user/dashboard/calender")
+    public ModelAndView getCalender() {
+        return new ModelAndView("/pages/user/calender");
+    };
+
+    @GetMapping("/user/dashboard/annoucements")
+    public ModelAndView getAnnoucements() {
+        return new ModelAndView("/pages/user/annoucements");
+    };
+
+    @GetMapping("/user/dashboard/upComingEvents")
+    public ModelAndView getUpComingEvents() {
+        return new ModelAndView("/pages/user/upComingEvents");
+    };
+
+    @GetMapping("/user/dashboard/clubs")
+    public ModelAndView getClubs() {
+        return new ModelAndView("/pages/user/clubs");
+    };
+
+    @GetMapping("/user/dashboard/fees")
+    public ModelAndView getFees() {
+        return new ModelAndView("/pages/user/fess");
+    };
+
+    @GetMapping("/user/dashboard/assignments")
+    public ModelAndView getAssignments() {
+        return new ModelAndView("/pages/user/assignments");
+    };
+
+    @GetMapping("/user/dashboard/exams")
+    public ModelAndView getExam() {
+        return new ModelAndView("/pages/user/exams");
+    };
+
+    @GetMapping("/user/dashboard/learningMaterials")
+    public ModelAndView getLearningMaterials() {
+        return new ModelAndView("/pages/user/learningMaterials");
+    };
+
+    @GetMapping("/user/dashboard/pastQuestions")
+    public ModelAndView getPastQuestions() {
+        return new ModelAndView("/pages/user/pastQuestions");
+    };
+
+    @GetMapping("/user/dashboard/libraryServices")
+    public ModelAndView getLibraryServices() {
+        return new ModelAndView("/pages/user/libraryServices");
+    };
+
 }
