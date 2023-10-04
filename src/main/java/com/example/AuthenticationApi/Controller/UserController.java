@@ -34,4 +34,9 @@ public class UserController {
         return new ModelAndView("/pages/user/home");
     };
 
+    @GetMapping("/user/dashboard/statement")
+    public ModelAndView getStatement() {
+        return new ModelAndView("/pages/user/statement");
+    };
+
 }
