@@ -94,4 +94,9 @@ public class UserController {
         return new ModelAndView("/pages/user/libraryServices");
     };
 
+    @GetMapping("/user/dashboard/courses")
+    public ModelAndView getRegisteredCourses() {
+        return new ModelAndView("/pages/user/courses");
+    };
+
 }
