@@ -39,7 +39,7 @@ public class UserController {
         return new ModelAndView("/pages/user/statement");
     };
 
-    @GetMapping("/user/dashboard/info")
+    @GetMapping("/user/dashboard/userInfo")
     public ModelAndView getUserInfo() {
         return new ModelAndView("/pages/user/userInfo");
     };
@@ -66,7 +66,7 @@ public class UserController {
 
     @GetMapping("/user/dashboard/fees")
     public ModelAndView getFees() {
-        return new ModelAndView("/pages/user/fess");
+        return new ModelAndView("/pages/user/fees");
     };
 
     @GetMapping("/user/dashboard/assignments")
